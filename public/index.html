@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" type="image/x-icon">
+    <title>WhatsChat</title>
+</head>
+
+<body>
+    <div class="chat">
+        <div class="logo">
+            <a href="#">
+                <div class="img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" alt="" width="60px" height="57px">
+                </div>
+                <div class="h1">WhatsChat</div>
+            </a>
+        </div>
+        <div class="contain"></div>
+        <div class="form">
+            <form id="forms">
+                <input type="text" id="input" name="input" placeholder="Type Message Here...">
+                <button type="submit" id="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+</body>
+
+</html>

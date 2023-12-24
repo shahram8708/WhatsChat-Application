@@ -1,0 +1,154 @@
+body{
+    background:linear-gradient(blueviolet, pink);
+}
+.chat{
+    margin: 20px 100px ;
+    text-transform: capitalize;
+}
+.contain{
+    background:linear-gradient(red, yellow);
+    height: 70vh;
+    overflow-y: auto;
+    margin: auto;
+    border: 3px solid black;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px;
+    background-color: greenyellow;
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+}
+.h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+input{
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+    font-size: large;
+    font-weight: bolder;
+    margin: 20px 20px 0 0;
+    border: 3px solid black;
+    text-transform: capitalize;
+}
+button{
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 20px 0 0 0;
+    padding: 1px 15px;
+    border: 3px solid black;
+    background-color: green;
+    color: white;
+}
+button:hover{
+    background-color: greenyellow;
+    color: black;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.send{
+    background-color: white;
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    padding: 5px;
+    float: right;
+    margin: 10px 10px 10px 100px;
+    border-radius: 10px;
+    clear: both;
+    border: 3px solid black;
+}
+.left{
+    background-color:aqua;
+    border: 3px solid black;
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    padding: 5px;
+    float: left;
+    margin: 10px 100px 10px 10px;
+    border-radius: 10px;
+    clear: both;
+}
+.join{
+    background-color:blue;
+    border: 3px solid black;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    padding: 5px;
+    float: left;
+    margin: 10px 100px 10px 10px;
+    border-radius: 10px;
+    clear: both;
+}
+.receive{
+    background-color: black;
+    border: 3px solid white;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    padding: 5px;
+    text-transform: capitalize;
+    float: left;
+    margin: 10px 100px 10px 10px;
+    border-radius: 10px;
+    clear: both;
+}
+@media screen and (max-width:800px) {
+    .chat{
+        margin: 10px;
+    }
+    input{
+        padding: 10px;
+    }
+    button{
+        padding: 5px 20px;
+    }
+}
+@media screen and (max-width:800px){
+    .send{
+        margin: 10px 10px 10px 30px;
+    }
+    .receive{
+        margin: 10px 30px 10px 10px;
+    }
+    .left{
+        margin: 10px 30px 10px 10px;
+    }
+    .join{
+        margin: 10px 30px 10px 10px;
+    }
+}
+@media screen and (max-width:355px){
+    .send{
+        margin: 10px 10px 10px 10px;
+        width: 70%;
+    }
+    .receive{
+        margin: 10px 10px 10px 10px;
+        width: 70%;
+    }
+    .left{
+        margin: 10px 10px 10px 10px;
+        width: 70%;
+    }
+    .join{
+        margin: 10px 10px 10px 10px;
+        width: 70%;
+    }
+}
