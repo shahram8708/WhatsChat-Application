@@ -1,6 +1,6 @@
 const host = window.location.hostname;
 const port = window.location.port;
-const socket = io(`http://${host}:${port}`);
+const socket = io(`https://${host}:${port}`);
 
 const form = document.getElementById("forms");
 const messageInput = document.getElementById("input");
