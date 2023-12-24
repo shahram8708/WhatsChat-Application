@@ -19,18 +19,27 @@ const io = socketIO(server, {
 let users = {};
 
 io.on('connection', (socket) => {
-  socket.on('new-user-joined', (name) => {
-    users[socket.id] = name;
-    socket.broadcast.emit('user-joined', name);
+  socket.on('join-room', (roomId, name) => {
+    socket.join(roomId);
+    users[socket.id] = { roomId, name };
+    socket.to(roomId).emit('user-joined', name);
+    socket.emit('welcome', `Welcome, ${name}!`);
   });
 
-  socket.on('send', (message) => {
-    socket.broadcast.emit('receive', { message: message, name: users[socket.id] });
+  socket.on('send', (data) => {
+    const { message, roomId } = data;
+    const user = users[socket.id];
+    if (user && user.roomId === roomId) {
+      socket.broadcast.to(roomId).emit('receive', { message: message, name: user.name });
+    }
   });
 
   socket.on('disconnect', () => {
-    socket.broadcast.emit('left', users[socket.id]);
-    delete users[socket.id];
+    const user = users[socket.id];
+    if (user) {
+      socket.to(user.roomId).emit('left', user.name);
+      delete users[socket.id];
+    }
   });
 });
 

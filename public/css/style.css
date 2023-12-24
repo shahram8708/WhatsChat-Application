@@ -16,7 +16,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 10px 0;
 }
 .logo a{
     display: flex;
@@ -150,5 +150,8 @@ form{
     .join{
         margin: 10px 10px 10px 10px;
         width: 70%;
+    }
+    .h1{
+        font-size: large;
     }
 }
